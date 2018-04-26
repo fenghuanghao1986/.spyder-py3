@@ -25,7 +25,7 @@ print(stat.head(5))
 
 # Q2
 # part a. Summary statics
-statSummary = stat.describe()
+statSummary1 = stat.describe()
 # part b. 
 
 """
@@ -57,11 +57,10 @@ plt.xlabel('Sales Values')
 plt.ylabel('Student number')
 plt.subplots_adjust(hspace= 0.6)
 plt.show()
-
 # Q3
 # part a. Summary statics
-# I am not sure what is the difference between Q2 part a
-statSummary = stat.describe()
+statSummary2 = stat[["NumCalls", "Sales"]].describe()
+"""
 # create call number bar chart 
 callBar = stat.NumCalls.value_counts()
 callBar = pd.DataFrame(callBar)
@@ -70,20 +69,27 @@ callBar.plot(kind="bar")
 saleBar = stat.Sales.value_counts()
 saleBar = pd.DataFrame(saleBar)
 saleBar.plot(kind="bar")
+"""
+NC = stat[['NumCalls']].plot(kind='bar', title ="Simple Bar Chart for Calls", figsize=(15, 10), legend=True, fontsize=12)
+NC.set_xlabel("ID", fontsize=12)
+NC.set_ylabel("Number of Calls", fontsize=12)
+plt.show()
+Sale = stat[['Sales']].plot(kind='bar', title ="Simple Bar Chart for Sales", figsize=(15, 10), legend=True, fontsize=12)
+Sale.set_xlabel("ID", fontsize=12)
+Sale.set_ylabel("Sales", fontsize=12)
+plt.show()
 # part c. 
 # use matplot to create bar chart
-plt.subplot(211)
 plt.grid(True)
-plt.bar(stat.NumCalls, np.array(len(stat.NumCalls)))
+plt.bar(np.arange(len(stat.NumCalls)), stat.NumCalls)
 plt.title('Barchart of Calls')
 plt.xlabel('Number of calls')
 plt.ylabel('Student Number')
-plt.subplot(212)
+plt.show()
 plt.grid(True)
-plt.bar(stat.Sales, np.array(len(stat.Sales)))
+plt.bar(np.arange(len(stat.Sales)), stat.Sales)
 plt.title('Barchart of Sales')
 plt.xlabel('Sales Values')
 plt.ylabel('Student number')
-plt.subplots_adjust(hspace= 0.6)
 plt.show()
-#change test
+# Q4

@@ -63,3 +63,9 @@ runfile('C:/Users/fengh/.spyder-py3/objectTracking.py', wdir='C:/Users/fengh/.sp
 
 ## ---(Tue Apr 24 15:19:32 2018)---
 runfile('C:/Users/fengh/.spyder-py3/objectTracking.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Thu Apr 26 02:24:31 2018)---
+runfile('C:/Users/fengh/.spyder-py3/STATInClassWork1.py', wdir='C:/Users/fengh/.spyder-py3')
+np.array(len(stat.NumCalls))
+a = np.array(len(stat.NumCalls))
+runfile('C:/Users/fengh/.spyder-py3/STATInClassWork1.py', wdir='C:/Users/fengh/.spyder-py3')
