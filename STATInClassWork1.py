@@ -93,3 +93,32 @@ plt.xlabel('Sales Values')
 plt.ylabel('Student number')
 plt.show()
 # Q4
+# remove senior sales manager and chief sales officer row
+stat1 = stat[stat.Job != 'Senior Sales Manager']
+stat1 = stat1[stat1.Job != 'Chief Sales Officer']
+# create a job datafreame
+job = stat1.Job.value_counts()
+# plot pie chart
+job.plot(kind='pie', fontsize=12)
+plt.title("Pie Chart of Job")
+plt.ylabel('')
+plt.legend(labels=job.index, loc="upper left")
+plt.show()
+# Q5
+# part a. 
+# create a Sale I dataframe
+sale1 = stat[stat.Job == 'Sales Rep. I']
+sale2 = stat[stat.Job == 'Sales Rep. II']
+# Ploting line plots
+plt.plot(sale1.Date, sale1.Sales)
+plt.xticks(rotation=90)
+plt.title("Over Time Sales Rep. I")
+plt.xlabel("Time")
+plt.ylabel("Sales II")
+plt.show()
+plt.plot(sale2.Date, sale2.Sales)
+plt.xticks(rotation=90)
+plt.title("Over Time Sales Rep. II")
+plt.xlabel("Time")
+plt.ylabel("Sales II")
+plt.show()
