@@ -60,7 +60,9 @@ plt.show()
 # Q3
 # part a. Summary statics
 statSummary2 = stat[["NumCalls", "Sales"]].describe()
+# part b.
 """
+
 # create call number bar chart 
 callBar = stat.NumCalls.value_counts()
 callBar = pd.DataFrame(callBar)
@@ -70,11 +72,11 @@ saleBar = stat.Sales.value_counts()
 saleBar = pd.DataFrame(saleBar)
 saleBar.plot(kind="bar")
 """
-NC = stat[['NumCalls']].plot(kind='bar', title ="Simple Bar Chart for Calls", figsize=(15, 10), legend=True, fontsize=12)
+NC = stat[['NumCalls']].plot(kind='bar', title ="Simple Bar Chart for Calls", legend=True, fontsize=12)
 NC.set_xlabel("ID", fontsize=12)
 NC.set_ylabel("Number of Calls", fontsize=12)
 plt.show()
-Sale = stat[['Sales']].plot(kind='bar', title ="Simple Bar Chart for Sales", figsize=(15, 10), legend=True, fontsize=12)
+Sale = stat[['Sales']].plot(kind='bar', title ="Simple Bar Chart for Sales", legend=True, fontsize=12)
 Sale.set_xlabel("ID", fontsize=12)
 Sale.set_ylabel("Sales", fontsize=12)
 plt.show()
@@ -116,9 +118,16 @@ plt.title("Over Time Sales Rep. I")
 plt.xlabel("Time")
 plt.ylabel("Sales II")
 plt.show()
+# part b.
 plt.plot(sale2.Date, sale2.Sales)
 plt.xticks(rotation=90)
 plt.title("Over Time Sales Rep. II")
 plt.xlabel("Time")
 plt.ylabel("Sales II")
 plt.show()
+# Q6
+a = stat['Gender'].value_counts()
+b = stat['Country'].value_counts()
+# create crosstab dataframe
+c = pd.crosstab(stat.Gender,stat.Country)
+c.plot.bar(title ="Differences in Frequencies", legend=True, fontsize=12)
