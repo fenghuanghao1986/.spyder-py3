@@ -69,3 +69,6 @@ runfile('C:/Users/fengh/.spyder-py3/STATInClassWork1.py', wdir='C:/Users/fengh/.
 np.array(len(stat.NumCalls))
 a = np.array(len(stat.NumCalls))
 runfile('C:/Users/fengh/.spyder-py3/STATInClassWork1.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Fri Apr 27 14:08:24 2018)---
+import cv2
