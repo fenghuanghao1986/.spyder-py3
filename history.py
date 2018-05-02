@@ -72,3 +72,6 @@ runfile('C:/Users/fengh/.spyder-py3/STATInClassWork1.py', wdir='C:/Users/fengh/.
 
 ## ---(Fri Apr 27 14:08:24 2018)---
 import cv2
+
+## ---(Wed May  2 09:26:33 2018)---
+runfile('C:/Users/fengh/.spyder-py3/STATInClassWork3.py', wdir='C:/Users/fengh/.spyder-py3')
