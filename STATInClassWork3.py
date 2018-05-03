@@ -6,13 +6,10 @@ Created on Tue May  1 23:09:32 2018
 """
 
 # Q1
-# Importing libs
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# read csv file
 file = pd.read_csv("STATL3Nuts.csv")
-# convert file to dataframe 
 stat = pd.DataFrame(file)
 stat = stat.drop(stat.columns[[0]], axis=1)
 print(stat.head(5))
@@ -37,15 +34,17 @@ qmt = quantMeanByType.plot(kind='bar', title ="Mean of Quantity by Type", fontsi
 qmt.set_ylabel("Mean Quantity", fontsize=12)
 plt.show()
 # Q7 
-quantMeanLoc = stat['Quantity'].groupby(stat.Location).mean()
-quantMinLoc = stat['Quantity'].groupby(stat.Location).min()
-quantMaxLoc = stat['Quantity'].groupby(stat.Location).max()
-# not sure how to use .agg for this . will think about it later
-# Q8 is this data mean the Q7's data or the original one?
-statPivot = stat.pivot_table(stat,index='Location',columns='Type')
-print(statPivot)
-# not sure if it is correct or not, will think later
-# Q9 same process as Q7 and Q8 I believe
+functions = ['mean', 'max', 'min']
+quantAggOut = stat.groupby(stat.Location).agg({'Quantity':functions})
+totalAggOut = stat.groupby(stat.Location).agg({'Total':functions})
+print(quantAggOut)
+print(totalAggOut)
+# Q8 
+statPivotDef = stat.pivot_table(stat,index='Location',columns='Type') # default func is mean
+print(statPivotDef)
+# Q9
+statPivotSTD = stat.pivot_table(stat,index='Location',columns='Type',aggfunc='std') # default func is mean
+print(statPivotSTD)
 # Q10
-
-
+statCross = pd.crosstab(stat.Type, stat.Location, margins=True)
+statCross
