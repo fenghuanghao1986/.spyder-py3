@@ -84,3 +84,6 @@ runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyd
 
 ## ---(Tue May  8 10:37:34 2018)---
 runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Tue May  8 17:07:46 2018)---
+runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
