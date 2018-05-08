@@ -81,3 +81,6 @@ runfile('C:/Users/fengh/Desktop/My Python Project for NAO/NAO_vision_part/Ball_t
 
 ## ---(Mon May  7 12:54:00 2018)---
 runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Tue May  8 10:37:34 2018)---
+runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')

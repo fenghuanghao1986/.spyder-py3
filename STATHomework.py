@@ -26,15 +26,17 @@ print(ntsdstooq.head(5))
 # create dataframes sepratly for each company
 # Morningstar
 mor = morningstar[['Close', 'Open','Volume','High','Low']].head(20)
-
+#pd.to_datetime(mor)
 # Robinhood
 # column names are different from others note that
 rob = robinhood[['close_price', 'open_price','volume','high_price','low_price']].head(20)
+rob.columns = ['Close', 'Open','Volume','High','Low']
+pd.to_datetime(rob)
 
 # Quandl
 qua = quandl[['Close', 'Open','Volume','High','Low']].head(20)
+pd.to_datetime(qua)
 
 # Nasdaq
 ntsd = ntsdstooq[['Close', 'Open','Volume','High','Low']].head(20)
-
-closeTable = pd.crosstab(mor.Close, qua.Close, ntsd.Close, margins=True)
+pd.to_datetime(ntsd)
