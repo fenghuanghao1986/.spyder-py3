@@ -106,3 +106,10 @@ robinhood.dtypes
 OpenData['Robinhood'] = OpenData['Robinhood'].astype('float')
 OpenData.dtypes
 pd.plotting.scatter_matrix(OpenData, alpha=0.2)
+runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
+Close.Morningstar
+CloseData.Morningstar
+a = CloseData.Morningstar
+a
+a[:-1].values / a[1:] - 1
+runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')

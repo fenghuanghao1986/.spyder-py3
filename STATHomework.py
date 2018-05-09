@@ -123,17 +123,37 @@ OpenData['Robinhood'] = OpenData['Robinhood'].astype('float')
 # double check data types make sure it will work
 OpenData.dtypes
 pd.plotting.scatter_matrix(OpenData, alpha=0.2)
-#
-
-
-
-
-
-
-
-
-
-
+# Q7
+# before process, need to change Robinhood'd data type
+# this is based on those 200 rows of data from each company
+rob['High'] = rob['High'].astype('float')
+plt.subplot(221)
+plt.hist(mor.High)
+plt.xlabel("Morningstar")
+plt.grid(True)
+plt.subplot(222)
+plt.hist(rob.High)
+plt.xlabel("Robinhood")
+plt.grid(True)
+plt.subplot(223)
+plt.hist(qua.High)
+plt.xlabel("Quandl")
+plt.grid(True)
+plt.subplot(224)
+plt.hist(ntsd.High)
+plt.xlabel("Nasdaq")
+plt.grid(True)
+plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.5,
+                    wspace=0.35)
+plt.show()
+# Q8
+# extract Morningstar's close data
+morClose = CloseData.Morningstar
+# if I understand correct
+# The daily return measures the dollar change in a stock's price 
+# as a percentage of the previous day's closing price.
+# base on this definition simple code will be implemented as follows
+morClose[:-1].values / morClose[1:] - 1
 
 
 
