@@ -8,6 +8,7 @@ Created on Sat May  5 12:14:47 2018
 # Q1
 import pandas_datareader.data as web
 import pandas as pd
+import matplotlib.pyplot as plt
 from datetime import datetime
 # Remotely getting data from companies
 morningstar = web.DataReader('F', 'morningstar')
@@ -97,6 +98,32 @@ dicLow = {'Morningstar': morLow,
 LowData = pd.DataFrame(dicLow)
 LowData.head(5)
 # Q3
+# the data I am using below is based on those 200 rows
+# if I understand it correct, plot will be Time vs Open
+# the data I use here is from Nasdaq
+plt.figure()
+plt.plot(ntsd.index, ntsd.Open)
+plt.xticks(rotation=90)
+plt.title("Nasdaq Time Series Plot for Open")
+plt.xlabel("Time")
+plt.ylabel("Open")
+plt.show()
+# Q4
+# this is based on the 200 rows of data for all companies
+VolumeData.corr()
+# Q5
+# this is based on the 200 rows of data for all companies
+# using Morningstar and Quandl close data
+CloseData[['Morningstar', 'Quandl']].cov()
+# Q6
+# for some reason
+# Robinhood's data not all numerical
+# need to do some pre-process first
+OpenData['Robinhood'] = OpenData['Robinhood'].astype('float')
+# double check data types make sure it will work
+OpenData.dtypes
+pd.plotting.scatter_matrix(OpenData, alpha=0.2)
+#
 
 
 

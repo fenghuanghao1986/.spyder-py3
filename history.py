@@ -87,3 +87,22 @@ runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyd
 
 ## ---(Tue May  8 17:07:46 2018)---
 runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
+int(rob)
+pd.to_numeric(rob)
+pd.to_numeric(rob.Close, errors='ignore')
+pd.to_numeric(rob, errors='ignore')
+pd.to_numeric(rob.Close, errors='ignore')
+pd.to_numeric(rob.Open, errors='ignore')
+pd.to_numeric(rob.High, errors='ignore')
+pd.to_numeric(rob.Low, errors='ignore')
+pd.to_numeric(OpenData.Robinhood, errors='ignore')
+pd.plotting.scatter_matrix(OpenData, alpha=0.2)
+OpenData.astype('float64')
+pd.plotting.scatter_matrix(OpenData, alpha=0.2)
+robinhood.close_price
+robinhood.volume
+robinhood.dtype
+robinhood.dtypes
+OpenData['Robinhood'] = OpenData['Robinhood'].astype('float')
+OpenData.dtypes
+pd.plotting.scatter_matrix(OpenData, alpha=0.2)
