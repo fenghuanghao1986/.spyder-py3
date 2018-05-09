@@ -81,17 +81,20 @@ counts = pd.value_counts(data.SalesRep)
 counts = pd.DataFrame(counts)
 
 # part c
-# need find a way to change xticks
 plt.grid(True)
 objects = tuple(counts.index)
 plt.bar(np.arange(len(counts.index)), counts.SalesRep)
+plt.xticks(np.arange(3),objects)
 plt.xlabel('Name of Representatives')
 plt.ylabel('Number of Business Transactions')
 plt.show()
 
 # part d
-# need to add numbers to the pie chart
-counts['SalesRep'].plot.pie()
+# showing actrual value on pie chart
+def absolute_value(val):
+    a  = np.round(val/100*counts['SalesRep'].sum(), 0)
+    return a
+plt.pie(counts, labels=counts.index,autopct=absolute_value,shadow=True)
 
 # 15
 # part a

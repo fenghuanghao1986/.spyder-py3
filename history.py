@@ -113,3 +113,23 @@ a = CloseData.Morningstar
 a
 a[:-1].values / a[1:] - 1
 runfile('C:/Users/fengh/.spyder-py3/STATHomework.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Tue May  8 20:56:11 2018)---
+runfile('C:/Users/fengh/.spyder-py3/project.py', wdir='C:/Users/fengh/.spyder-py3')
+counts.plot.pie()
+counts['SalesRep'].plot.pie(counts.SalesRep)
+counts['SalesRep'].plot.pie(autopct=absolute_value)
+plt.pie(counts)
+plt.pie(counts, lables=counts.index, autopct=absolute_value,shadow=True)
+plt.pie(counts, lables=counts.index,shadow=True)
+plt.pie(counts, labels=counts.index,shadow=True)
+plt.pie(counts, labels=counts.index,autopct='%.0f%%',shadow=True)
+def absolute_value(val):
+    a  = numpy.round(val/100.*counts['SalesRep'].sum(), 0)
+    return a
+plt.pie(counts, labels=counts.index,autopct=absolute_value,shadow=True)
+
+def absolute_value(val):
+    a  = numpy.round(val/100.*counts['SalesRep'].sum(), 0)
+return a
+runfile('C:/Users/fengh/.spyder-py3/project.py', wdir='C:/Users/fengh/.spyder-py3')
