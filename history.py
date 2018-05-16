@@ -133,3 +133,67 @@ def absolute_value(val):
     a  = numpy.round(val/100.*counts['SalesRep'].sum(), 0)
 return a
 runfile('C:/Users/fengh/.spyder-py3/project.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Wed May  9 10:29:57 2018)---
+runfile('C:/Users/fengh/Desktop/My Python Project for NAO/NAO_vision_part/Ball_tracking_v1.py', wdir='C:/Users/fengh/Desktop/My Python Project for NAO/NAO_vision_part')
+
+## ---(Wed May  9 13:04:36 2018)---
+runfile('C:/Users/fengh/Desktop/My Python Project for NAO/NAO_vision_part/Ball_tracking_v1.py', wdir='C:/Users/fengh/Desktop/My Python Project for NAO/NAO_vision_part')
+runfile('C:/Users/fengh/Desktop/Video_Processing/recreate_videos.py', wdir='C:/Users/fengh/Desktop/Video_Processing')
+
+## ---(Wed May  9 14:24:08 2018)---
+runfile('C:/Users/fengh/Desktop/Video_Processing/recreate_videos.py', wdir='C:/Users/fengh/Desktop/Video_Processing')
+
+## ---(Thu May 10 11:05:36 2018)---
+import cv2
+
+## ---(Thu May 10 16:51:24 2018)---
+file = open('Video 27.wmv', rb)
+file = open('Video 27.wmv', 'rb')
+file.read(100)
+file.read(2000)
+file.read(1000)
+file.close
+file.close()
+file = open('Video 27.wmv', 'rb')
+file.read(1000)
+file.read(10000)
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice.py', wdir='C:/Users/fengh/Desktop/data_structure')
+clear all
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice.py', wdir='C:/Users/fengh/Desktop/data_structure')
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3.py', wdir='C:/Users/fengh/Desktop/data_structure')
+q.size()
+class q = new(Queue)
+q = Queue()
+q.size()
+q.isEmpty()
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3.py', wdir='C:/Users/fengh/Desktop/data_structure')
+q.isEmpty()
+q.enqueue(8.4)
+q.isEmpty()
+q.enqueue(8.4)
+q.isEmpty()
+q.size()
+q
+q.dequeue(8.4)
+q.dequeue()
+q.isEmpty()
+clear all
+q = Queue()
+
+## ---(Tue May 15 16:59:39 2018)---
+runfile('C:/Users/fengh/Desktop/data_structure/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/Desktop/data_structure')
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+Sheet2(1)
+Sheet2[0]
+Sheet2[1]
+Sheet2.0
+Sheet2.1
+Sheet2.loc(1)
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+Sheet2['Flavor'] == 'Choc'
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+%pwd
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+os.listdir("C:\\Users\\fengh\\Desktop\\CurrentData")
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
