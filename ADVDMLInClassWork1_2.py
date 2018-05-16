@@ -4,7 +4,7 @@ Created on Tue May 15 17:11:53 2018
 
 @author: fengh
 """
-
+# Section 1
 # Q1
 import pandas as pd
 from io import StringIO
@@ -179,6 +179,7 @@ TestPath.head(5)
 
 # Q4
 # part a
+import os
 if not os.path.exists('SubData'):
     os.makedirs('SubData')
 
@@ -188,8 +189,19 @@ TestPath.head(5)
 
 # Q5
 # part a
+import os
 
+os.listdir("C:\\Users\\fengh\\Desktop\\ParentData")
 
+# part b
+# I assume you want us to create parent folder outside
+# then read file from subfolder 
+os.chdir("C:\\Users\\fengh\\Desktop\\ParentData\\CurrentData")
+TestPath = pd.read_csv("..\\ADVDML1TestCurrentPath.tsv", sep="\t+")
+TestPath.head(5)
+
+# Section 2
+# Q6
 
 
 

@@ -197,3 +197,8 @@ runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fen
 runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
 os.listdir("C:\\Users\\fengh\\Desktop\\CurrentData")
 runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+os.chdir("C:\\Users\\feng\\\Desktop\\CurrentData")
+os.chdir("C:\\Users\\feng\\\Desktop\\ParentData\\CurrentData")
+
+## ---(Wed May 16 13:04:57 2018)---
+runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
