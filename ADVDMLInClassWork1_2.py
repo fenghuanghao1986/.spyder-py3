@@ -154,8 +154,13 @@ Choc	31
 Choc	75
 Choc	34"""
 Sheet2 = pd.read_table(StringIO(sheet2), sep="\s+")
-Sheet2['Total'] = 2.00 * Sheet2.Data[Sheet2['Flavor']=='Choc']
-Sheet2['Total'] = 1.50 * Sheet2.Data[Sheet2['Flavor']=='Van']
+Sheet2['Price'] = 0
+Sheet2.Price[Sheet2.Flavor == 'Choc'] = 2.00
+Sheet2.Price[Sheet2.Flavor == 'Van'] = 1.50
+Sheet2['Total'] = Sheet2['Price'] * Sheet2['Data']
+Sheet2 = Sheet2.drop(columns='Price')
+print(Sheet2.head(5))
+
 
 # Q3
 # part a
@@ -202,6 +207,113 @@ TestPath.head(5)
 
 # Section 2
 # Q6
+# part a
+import urllib.request
+from urllib.request import Request, urlopen
+# here is another way may not use urllib
+# and it works
+'''
+url = 'https://github.com/kkParker/ClassData/raw/master/Python/ADVDML2Mike.csv'
+df = pd.read_csv(url, index_col=0, parse_dates=[0])
+print(df)
+'''
+# something missing on the slides when use .read_csv
+# if not add inedx and parse thing, it never works
+response = urllib.request.urlopen("https://github.com/kkParker/ClassData/raw/master/Python/ADVDML2Sue.csv")
+dfSue = pd.read_csv(response, index_col=0, parse_dates=[0])
+dfSue.head(5)
+
+response = urllib.request.urlopen("https://github.com/kkParker/ClassData/raw/master/Python/ADVDML2Mike.csv")
+dfMike = pd.read_csv(response, index_col=0, parse_dates=[0])
+dfMike.head(5)
+
+# part b
+dfSue.Flavor[dfSue.Flavor==1] = "Chocolate"
+dfSue.Flavor[dfSue.Flavor==2] = "Vanilla"
+dfSue.Flavor[dfSue.Flavor==3] = "Mixed"
+dfSue.head(5)
+dfMike.Flavor[dfMike.Flavor==1] = "Chocolate"
+dfMike.Flavor[dfMike.Flavor==2] = "Vanilla"
+dfMike.Flavor[dfMike.Flavor==3] = "Mixed"
+dfMike.head(5)
+
+# Q7
+import matplotlib.pyplot as plt
+import numpy as np
+
+counts = pd.value_counts(dfSue.Flavor)
+counts = pd.DataFrame(counts)
+plt.grid(True)
+objects = tuple(counts.index)
+plt.bar(np.arange(len(counts.index)), counts.Flavor)
+plt.xticks(np.arange(3),objects)
+plt.title("Barchart of Sue's Flavor")
+plt.xlabel('Flavors')
+plt.ylabel('Counts')
+plt.show()
+
+# Q8
+# part a
+counts = pd.value_counts(dfMike.Flavor)
+counts = pd.DataFrame(counts)
+plt.grid(True)
+objects = tuple(counts.index)
+plt.bar(np.arange(len(counts.index)), counts.Flavor)
+plt.xticks(np.arange(3),objects)
+plt.title("Barchart of Mike's Flavor")
+plt.xlabel('Flavors')
+plt.ylabel('Counts')
+plt.show()
+
+# part b
+def barchart(x, y, xlabel, ylabel, xticksnames, title):
+    plt.bar(x,y,width=.5)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.xticks(x,xticksnames)
+    plt.title(title)
+    plt.show()
+    
+y = counts.Flavor
+x = np.arange(len(counts.index))
+xlabel = 'Flavors'
+ylabel = 'Counts'
+xticksnames = objects
+title = "Barchart of Mike's Flavor" 
+barchart(x,y,xlabel,ylabel,xticksnames,title)
+
+# part c
+from bs4 import BeautifulSoup
+
+url = "https://github.com/kkParker/ClassData/tree/master/Python"
+response = urllib.request.urlopen(url)
+html = response.read()
+soup = BeautifulSoup(html, "lxml")
+print(soup)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
