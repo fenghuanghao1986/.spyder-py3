@@ -202,3 +202,8 @@ os.chdir("C:\\Users\\feng\\\Desktop\\ParentData\\CurrentData")
 
 ## ---(Wed May 16 13:04:57 2018)---
 runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Thu May 17 10:39:34 2018)---
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3_hot_potato.py', wdir='C:/Users/fengh/Desktop/data_structure')
+print(hotPotato(namelist, num)
+runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3_hot_potato.py', wdir='C:/Users/fengh/Desktop/data_structure')
