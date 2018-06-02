@@ -207,3 +207,22 @@ runfile('C:/Users/fengh/.spyder-py3/ADVDMLInClassWork1_2.py', wdir='C:/Users/fen
 runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3_hot_potato.py', wdir='C:/Users/fengh/Desktop/data_structure')
 print(hotPotato(namelist, num)
 runfile('C:/Users/fengh/Desktop/data_structure/data_practice_ch3_hot_potato.py', wdir='C:/Users/fengh/Desktop/data_structure')
+
+## ---(Wed May 30 12:22:52 2018)---
+runfile('C:/Users/fengh/Desktop/data_structure/palchecker.py', wdir='C:/Users/fengh/Desktop/data_structure')
+a = "asdfasdfa"
+char = Deque()
+for ch in a:
+    char.addRear(ch)
+    
+char
+display char
+
+## ---(Fri Jun  1 10:22:49 2018)---
+runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
+weightFile.head(10)
+runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
+weightFile.describe()
+runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
+weightFile["headcirumference"].unique()
+runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
