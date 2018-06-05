@@ -226,3 +226,85 @@ weightFile.describe()
 runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
 weightFile["headcirumference"].unique()
 runfile('C:/Users/fengh/.spyder-py3/ADVSTAT_T_A_R.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Sun Jun  3 20:08:41 2018)---
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+qua.isnull()
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+qua.isnull()
+qua.describe()
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+response = urllib.request.urlopen("https://github.com/fenghuanghao1986/.spyder-py3/blob/master/BusinessData.csv")
+data = pd.read_csv(response, index_col=0, parse_dates=[0])
+data = pd.read_csv(response)
+data = pd.read_csv(response, index_col=0, parse_dates=[0],error_bad_lines=False)
+data = pd.read_csv(response, error_bad_lines=False)
+data = pd.read_csv(response, index_col=0, parse_dates=[0], error_bad_lines=False)
+data = pd.read_csv(response, index_col=0, parse_dates=[0], delim_whitespace=True)
+response
+pd.read_csv(response)
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+response = urllib.request.urlopen("https://github.com/fenghuanghao1986/.spyder-py3/blob/master/BusinessData.csv")
+data = csv.reader(response)
+data
+data = pd.csv_read("https://github.com/fenghuanghao1986/.spyder-py3/blob/master/BusinessData.csv")
+data = pd.read_csv("https://github.com/fenghuanghao1986/.spyder-py3/blob/master/BusinessData.csv")
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+data
+data.isnull
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+data.fillna(data.UnitPrice.mean())
+data.isnull
+a  = data.isnull()
+a
+data.fillna(data.UnitPrice.mean(), inplace=True)
+data.isnull
+b = data.isnull()
+data.describe
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+stct
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+data.cov(data.UnitPrice)
+data.cov()
+dcov = data.cov
+dcov
+data.UnitPrice.cov
+data['UnitPrice', 'UnitCost'].cov
+Unitcov = data.UnitPrice.cov()
+data.cov
+a = data.cov()
+covdata = data['UnitPrice', 'UnitCost']
+[data.UnitPrice,data.UnitCost].cov
+[data.UnitPrice,data.UnitCost].cov()
+data['UnitPrice','UnitCost'].cov()
+unitData = data.UnitPrice
+unitData.UnitCost = data.UnitCost
+unitData
+unitData.UnitCost = [data.UnitCost, data.UnitPrice]
+unitData
+unitData['UnitCost'] = data.UnitCost
+unitData.append(data.UnitCost)
+unitData
+unitData = data.UnitPrice
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+unitData = data.UnitPrice
+unitData.loc[:, 'UnitCost'] = pd.Series(data.UnitCost)
+unitData.loc[:, 'UnitCost'] = pd.Series(data.UnitCost, index=data.index)
+import numpy as np
+l = np.list(data.UnitCost)
+l = list(data.UnitCost)
+l
+unitData.loc[:, 'UnitCost'] = pd.Series(l, index=data.index)
+unitData.loc[:, 'UnitCost'] = l
+unitData
+unitData['UnitCost'] = data['UnitCost']
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+unitCov = unitData.cov()
+unitCov
+unitCorr = unitData.corr()
+unitCorr
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+pd.crosstab(data.SalesRep, data.Quantity, margins=True)
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+lop = data[:3]
+lop
