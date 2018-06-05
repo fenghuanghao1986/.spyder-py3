@@ -322,3 +322,7 @@ for i in range(len(data[:1])):
         l = data[i, j]
         
 runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+for i in range(1,3):
+    newData = data[:i]
+    
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')

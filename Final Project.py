@@ -48,7 +48,8 @@ crs = pd.crosstab(data.SalesRep, data.Quantity, margins=True)
 piv = data.pivot_table(index='SalesRep')
 # create loop for new dataframe
 rows = data[:3]
-
+for i in range(1,10):
+    newData = data[:i]
 # plots
 # bar chart
 counts = pd.value_counts(data.SalesRep)
@@ -165,7 +166,7 @@ else:
 import urllib2
 from bs4 import BeautifulSoup
 quote_page = 'http://www.bloomberg.com/quote/SPX:IND'
-page = urllib2.urlopen(quote_page)
+page = urllib.request.urlopen(quote_page)
 soup = BeautifulSoup(page, 'html.parser')
 
 
