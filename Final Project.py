@@ -4,11 +4,9 @@ Created on Sun Jun  3 20:10:32 2018
 
 @author: fengh
 """
-import csv
 import pandas_datareader.data as web
 import pandas as pd
 import matplotlib.pyplot as plt
-from datetime import datetime
 import urllib.request
 from urllib.request import Request, urlopen
 import numpy as np
@@ -111,8 +109,64 @@ plt.xlabel("Years of Service", fontsize=14)
 plt.ylabel("Salary", fontsize=14)
 plt.show()
 # t-test
+response1 = urllib.request.urlopen("https://raw.githubusercontent.com/fenghuanghao1986/.spyder-py3/master/birthweight_reduced.csv")
+data1 = pd.read_csv(response)
+# research question: what's the difference between low and normal weight?
+# extract weight for low and normal
+lowweight = data1.Birthweight[data1.LowBirthWeight=="Low"]
+norweight = data1.Birthweight[data1.LowBirthWeight=="Normal"]
+# compute the mean of weight for both status
+data1[["Birthweight", "LowBirthWeight"]].groupby("LowBirthWeight").mean()
+# visualize the distribution of low and normal weight
+# histogram
+plt.hist(lowweight, bins = 30)
+plt.title("Histogram of low weight")
+plt.xlabel("weight")
+plt.ylabel("Frequency")
+plt.show()
 
+plt.hist(norweight, bins = 30)
+plt.title("Histogram of normal weight")
+plt.xlabel("weight")
+plt.ylabel("Frequency")
+plt.show()
+# levene's test 
+teststats_Var, pvalue_Var = stats.levene(lowweight, norweight)
+print("This is a hypothesis test for the homogeneity of variance assumption")
+print("H0:The variances of low and normal weight are equal")
+print (f"test statistics: {teststats_Var}")
+print(f"pvalue: {pvalue_Var}")
 
+alpha = 0.05
+if pvalue_Var > alpha:
+    print("Decision: Fail to reject the null hypothesis")
+    print("Conclusion: The variances of low and normal weight are equal")
+    print("Proceed to perform a t-test")
+else:
+    print("Decision: Reject the null hypothesis")
+    print("Conclusion: The variances of low and normal weight are unequal")
+    print("Proceed to do a Welch's test since variances are unequal")
+# t-test
+teststats_Mean, pvalue_Mean= stats.ttest_ind(lowweight, norweight, equal_var=True)
+
+print("T Test: This is a hypothesis test for means of male and female faculty salary")
+print("H0: Means of low and normal are equal")
+print (f"test statistics (t): {teststats_Mean}")
+print(f"pvalue: {pvalue_Mean}")
+
+alpha = 0.05
+if pvalue_Mean > alpha:
+    print("Decision: Fail to reject the null hypothesis")
+    print("Conclusion: Means of low and normal weight are equal")
+else:
+    print("Decision: Reject the null hypothesis")
+    print("Conclusion: Means of low and normal weight are unequal")
+# beautiful soup
+import urllib2
+from bs4 import BeautifulSoup
+quote_page = 'http://www.bloomberg.com/quote/SPX:IND'
+page = urllib2.urlopen(quote_page)
+soup = BeautifulSoup(page, 'html.parser')
 
 
 
