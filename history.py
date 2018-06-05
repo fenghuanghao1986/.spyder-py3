@@ -308,3 +308,17 @@ pd.crosstab(data.SalesRep, data.Quantity, margins=True)
 runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
 lop = data[:3]
 lop
+data[1,1]
+data[:]
+data[:1]
+a in range(2)
+for a in range(2):
+    print a
+for a in range(2):
+    print(a)
+    
+for i in range(len(data[:1])):
+    for j in range(2):
+        l = data[i, j]
+        
+runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
