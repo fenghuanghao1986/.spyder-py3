@@ -326,3 +326,109 @@ for i in range(1,3):
     newData = data[:i]
     
 runfile('C:/Users/fengh/.spyder-py3/Final Project.py', wdir='C:/Users/fengh/.spyder-py3')
+
+## ---(Wed Jun  6 16:05:33 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/xylophone_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+range(1, L1/2+1, 1)
+range(1,10,2)
+_
+range(1,10)
+print(range(1,10))
+L2 = L1.astype('int32')
+L2 = np.array(L1)
+L2 = L2.astype('int32')
+int(L1)
+runfile('C:/Users/fengh/pythonProject/noteDetection/xylophone_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Thu Jun  7 12:05:44 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/xylophone_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+clear 
+reset
+clear
+import numpy as np
+import matplotlib.pyplot as plt
+import wave
+
+fileName1 = r'C:\Users\fengh\pythonProject\noteDetection\xylo\low_d_akg.wav'  # get the file name from the hard drive
+waveData1, Fs1 = sf.read(fileName1)
+import soundfile as sf
+waveData1, Fs1 = sf.read(fileName1)
+plt.figure;
+plt.plot(waveData1)
+A = np.array([0, 1,2,3,4,5])
+import scipy as si
+si.fftpack.fft(A)
+y = si.fftpack.fft(waveData1)
+P2 = np.abs(y/len(wavData1))
+P2 = np.abs(y/len(waveData1))
+p1 = p2[0,0]
+p2 = np.array([p2])
+p2 = np.array([P2])
+p1 = p2[0, 0:L/2]
+p1 = p2[0, 0:len(P2)/2]
+p1 = p2[0, 0:int(len(P2)/2)]
+ran = np.linspace(0,int(len(P2)/2), int(len(P2)/2))
+ran.shape
+f = Fs1*ran/len(P2)
+plt.plot(f, p1)
+reset
+clear
+runfile('C:/Users/fengh/pythonProject/noteDetection/xylophone_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+np.min(f2)
+range(0, int(N2/2), 1)
+Fs2
+N2
+f2 = np.array(range(0, int(N2/2), 1)) * Fs2 / N2
+np.min(f2)
+a = np.linspace(0,int(N2/2), int(N/2))
+a = np.linspace(0,int(N2/2), int(N2/2))
+np.min(a)
+f2 = np.array(a) * Fs2 / N2
+np.min(f2)
+runfile('C:/Users/fengh/pythonProject/noteDetection/xylophone_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Thu Jun 14 13:41:14 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/filter_test.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass2.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+clear
+reset
+clear
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass2.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+runfile('C:/Users/fengh/pythonProject/noteDetection/doFFT.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass2.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+file = r'C:\Users\fengh\pythonProject\noteDetection\xylo\xylophone_akg.wav'
+waveData, fs = sf.read(file)
+
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass2.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+clear
+reset
+clear
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass2.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Mon Jun 18 11:11:30 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+8400, 16800
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+runfile('C:/Users/fengh/pythonProject/noteDetection/find_peak_test_cod.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Fri Jul  6 15:37:08 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series_getPeaks.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+clear
+reseta
+reset
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series_getPeaks.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+y
+y.max
+max(y)
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series_getPeaks.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+clear
+reset
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series_getPeaks.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Sat Jul  7 08:56:48 2018)---
+runfile('C:/Users/fengh/pythonProject/noteDetection/bandpass_fft_series_getPeaks.py', wdir='C:/Users/fengh/pythonProject/noteDetection')
+
+## ---(Wed Jul 11 21:34:47 2018)---
+import naoqi
+import naoqi as nao
+from naoqi import ALProxy
